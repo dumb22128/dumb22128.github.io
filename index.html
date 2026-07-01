@@ -24,12 +24,12 @@
 <meta name="twitter:image" content="https://dumb22128.github.io/og.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700&family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600&family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#F4F0E6;--bg2:#FFFEFB;--ink:#1A2620;--soft:#5e655e;--green:#2E4C3C;--green-br:#527a66;--clay:#D98A3F;--line:#E7E0D3}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;overflow-x:clip}
-body{font-family:"Golos Text",system-ui,sans-serif;font-size:18px;line-height:1.62;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:clip;max-width:100%}
+body{font-family:"Golos Text",system-ui,sans-serif;font-size:18px;line-height:1.62;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:clip}
 h1,h2,h3,.pull,.verse{overflow-wrap:break-word}
 .word-w{overflow-wrap:normal;white-space:nowrap}
 a{text-decoration:none;color:inherit}
@@ -39,7 +39,8 @@ s{text-decoration-thickness:1.5px;text-decoration-color:rgba(46,76,60,.5)}
 .wrap{max-width:1100px;margin:0 auto;padding:0 32px}
 .h-display{font-family:"Unbounded",sans-serif;font-weight:600;letter-spacing:-.01em}
 :focus-visible{outline:2px solid var(--green);outline-offset:3px;border-radius:6px}
-section{padding:70px 0}
+section{padding:48px 0}
+.approach,.edu,.contact{padding-top:10px}
 .kick{font-family:"Unbounded";font-size:12px;font-weight:500;letter-spacing:.04em;color:var(--clay);margin-bottom:20px;text-transform:lowercase}
 h2.h-display{font-size:clamp(26px,3.6vw,40px);line-height:1.12;margin-bottom:16px}
 .sec-lede{color:var(--soft);max-width:56ch;font-size:18px;margin-bottom:40px}
@@ -54,7 +55,7 @@ h2.h-display{font-size:clamp(26px,3.6vw,40px);line-height:1.12;margin-bottom:16p
 .head-cta:hover{background:var(--green-br)}
 @media(max-width:720px){.navlinks a:not(.head-cta){display:none}}
 
-.hero{padding:78px 0 60px}
+.hero{padding:56px 0 44px}
 .hero h1{font-size:clamp(32px,4.6vw,56px);line-height:1.1;max-width:20ch;margin-bottom:24px}
 .hero h1 em{font-style:normal;color:var(--clay)}
 .hero .lede{font-size:clamp(18px,2.1vw,22px);color:var(--soft);max-width:54ch;margin-bottom:34px;line-height:1.5}
@@ -102,7 +103,7 @@ h2.h-display{font-size:clamp(26px,3.6vw,40px);line-height:1.12;margin-bottom:16p
 .how-item h3{font-family:"Unbounded";font-size:15px;font-weight:500;margin-bottom:9px}
 .how-item p{color:var(--soft);font-size:15.5px;line-height:1.5}
 
-.quote-band{text-align:center;padding:60px 0}
+.quote-band{text-align:center;padding:40px 0}
 .quote-band p{font-family:"Unbounded";font-weight:500;font-size:clamp(22px,3.2vw,36px);line-height:1.24;max-width:22ch;margin:0 auto;color:var(--ink)}
 .quote-band p b{color:var(--clay);font-weight:500}
 
@@ -113,11 +114,11 @@ h2.h-display{font-size:clamp(26px,3.6vw,40px);line-height:1.12;margin-bottom:16p
 .verse .q{color:var(--clay)}
 .poem-by{font-size:14px;color:#8f948e;margin-top:26px}
 
-.contact .format{font-family:"Unbounded";font-weight:500;font-size:clamp(18px,2.5vw,28px);margin-bottom:18px;line-height:1.3}.format b{color:var(--clay)}
 .contact-lede{color:var(--soft);max-width:52ch;margin-bottom:26px}
 .links{display:flex;gap:14px;flex-wrap:wrap}
 .links a{background:var(--bg2);border:1px solid var(--line);padding:12px 24px;border-radius:999px;font-weight:500;font-size:15px;transition:.2s}
 .links a:hover{background:var(--green);color:#fff;border-color:var(--green)}
+.site-note{margin-top:26px;font-size:13.5px;line-height:1.5;color:var(--soft);max-width:54ch}
 .foot{border-top:1px solid var(--line);padding:34px 0}
 .foot .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13.5px;color:var(--soft)}
 
@@ -128,14 +129,14 @@ h2.h-display{font-size:clamp(26px,3.6vw,40px);line-height:1.12;margin-bottom:16p
  .word{margin:0 8px;border-radius:24px}
 }
 @media(max-width:680px){
- .wrap{padding:0 20px}section{padding:52px 0}.row{grid-template-columns:1fr;gap:4px}
+ .wrap{padding:0 20px}section{padding:38px 0}.row{grid-template-columns:1fr;gap:4px}
  .word{padding:52px 16px}.word-w{font-size:clamp(24px,7.4vw,60px)}
  .approach-quote{padding:32px 26px}.poem-card{padding:44px 24px}
- .hero{padding:64px 0 52px}
+ .hero{padding:44px 0 38px}
 }
 
 /* деликатное появление при скролле */
-.reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease;will-change:opacity,transform}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
 .reveal.in{opacity:1;transform:none}
 .word.reveal{transition-duration:1s}
 @media(prefers-reduced-motion:reduce){
@@ -159,11 +160,11 @@ h2.h-display{font-size:clamp(26px,3.6vw,40px);line-height:1.12;margin-bottom:16p
 </div></header>
 
 <section class="hero" id="top"><div class="wrap">
-  <p class="kick">// в прошлой жизни — автотесты и дедлайны. в этой — живые разговоры.</p>
-  <h1 class="h-display">Психотерапия — это искусство задавать вопросы и <em>выстраивать отношения</em>, где на них не страшно отвечать.</h1>
-  <p class="lede">Герман Олейник — студент-практикующий психолог, экзистенциально-гуманистический подход. Я пришёл в профессию из IT и выгорания, поэтому говорю с тобой на одном языке.</p>
+  <p class="kick">// 5 лет назад писал автотесты, сейчас помогаю переписать людям кое-что важнее</p>
+  <h1 class="h-display">Психотерапия — это искусство задавать вопросы и <em>быть в отношениях</em>, где на них не страшно отвечать.</h1>
+  <p class="lede">Герман Олейник — студент-практикующий психолог, экзистенциально-гуманистический подход. Я пришёл в профессию из IT и выгорания, поэтому знаю, как порой трудно меняться.</p>
   <div class="hero-actions">
-    <a class="btn" href="https://t.me/pokureynik">Написать в Telegram</a>
+    <a class="btn" href="https://t.me/pokureynik">Записаться на консультацию</a>
     <span class="hero-meta">онлайн или очно в Москве · 55 минут · 2&nbsp;500&nbsp;₽</span>
   </div>
 </div></section>
@@ -172,13 +173,13 @@ h2.h-display{font-size:clamp(26px,3.6vw,40px);line-height:1.12;margin-bottom:16p
   <p class="kick"><s>человечность</s></p>
   <div class="word-w h-display">Человековость</div>
   <p class="word-pos">сущ. · от «человек»</p>
-  <p class="word-def">способность осознавать свою конечность — и всё равно стремиться прожить жизнь достойно и увлекательно, делая то, что нравится, с горячим сердцем. Чтобы однажды ответить «да» на предложение повторить это путешествие.</p>
-  <p class="word-base">а в путешествии всегда теплее, когда есть с кем <b>смеяться, рыдать и обниматься</b>.</p>
+  <p class="word-def">способность осознавать свою конечность — и всё равно стремиться прожить жизнь достойно и увлекательно, делая то, что нравится, с горящим сердцем. Чтобы однажды ответить «да» на предложение повторить это путешествие.</p>
+  <p class="word-base">а в нём всегда теплее, когда есть с кем <b>смеяться, рыдать и обниматься</b>.</p>
 </div></section>
 
 <section class="needs reveal" id="needs"><div class="wrap">
   <h2 class="h-display">С чем можно прийти</h2>
-  <p class="sec-lede">Список — это запросы, за которыми скрываются живые человеческие истории. Если что-то близко хотя бы в одном пункте и есть желание узнать себя — этого достаточно, чтобы написать.</p>
+  <p class="sec-lede">За каждым запросом скрываются живые человеческие истории. Если что-то близко хотя бы в одном пункте и есть желание узнать себя — этого достаточно, чтобы обратиться.</p>
   <div class="need-grid">
     <article class="need"><h3>Отношения</h3><p>С собой, с близкими, с партнёром, с миром. Когда рядом с людьми то тесно, то одиноко, и непонятно, как иначе.</p></article>
 <article class="need"><h3>Тревога</h3><p>Тревожиться нормально. Но иногда тревога не выключается и начинает фоном жить за тебя.</p></article>
@@ -221,8 +222,8 @@ h2.h-display{font-size:clamp(26px,3.6vw,40px);line-height:1.12;margin-bottom:16p
 <section class="edu reveal"><div class="wrap">
   <h2 class="h-display">Чему учусь и где учился</h2>
   <div class="edu-list">
-    <div class="row"><div class="yr">2025–2028<span class="now">учусь сейчас</span></div><div><div class="ti">Магистратура · Консультативная психология</div><div class="su"><a href="https://inpsycho.ru/" target="_blank" rel="noopener">Московский институт психоанализа</a></div></div></div>
-<div class="row"><div class="yr">2026–2028<span class="now">учусь сейчас</span></div><div><div class="ti">Профпереподготовка · Экзистенциально-гуманистический психотерапевт</div><div class="su"><a href="https://existence-centre.ru/" target="_blank" rel="noopener">МЦПКиП «ЭКЗИСТЕНЦИЯ»</a></div></div></div>
+    <div class="row"><div class="yr">2025<span class="now">учусь сейчас</span></div><div><div class="ti">Магистратура · Консультативная психология</div><div class="su"><a href="https://inpsycho.ru/" target="_blank" rel="noopener">Московский институт психоанализа</a></div></div></div>
+<div class="row"><div class="yr">2026<span class="now">учусь сейчас</span></div><div><div class="ti">Профпереподготовка · Экзистенциально-гуманистический психотерапевт</div><div class="su"><a href="https://existence-centre.ru/" target="_blank" rel="noopener">МЦПКиП «ЭКЗИСТЕНЦИЯ»</a></div></div></div>
 <div class="row"><div class="yr">2024</div><div><div class="ti">Магистратура · Системный анализ и управление</div><div class="su"><a href="https://www.mirea.ru/" target="_blank" rel="noopener">РТУ МИРЭА</a></div></div></div>
 <div class="row"><div class="yr">2022</div><div><div class="ti">Бакалавриат · Информатика и вычислительная техника</div><div class="su"><a href="https://www.mirea.ru/" target="_blank" rel="noopener">РТУ МИРЭА</a></div></div></div>
   </div>
@@ -233,13 +234,13 @@ h2.h-display{font-size:clamp(26px,3.6vw,40px);line-height:1.12;margin-bottom:16p
   <h2 class="h-display">Просто и по-человечески</h2>
   <p class="sec-lede">Никаких форм и сложных правил. Вот всё, что важно знать заранее.</p>
   <div class="how-grid">
-    <div class="how-item big"><h3>Первая встреча</h3><p>Знакомство. Ты рассказываешь, что привело; я слушаю и задаю вопросы. Расскажу и о себе: как устроена работа и в чём особенности подхода. Вместе посмотрим, подходим ли мы друг другу. Продолжать совершенно необязательно.</p></div>
+    <div class="how-item big"><h3>Первая встреча</h3><p>Знакомство. Ты рассказываешь, что привело; я слушаю и задаю вопросы. Расскажу и о себе: как устроена работа и в чём особенности подхода. Вместе посмотрим, подходим ли мы друг другу.</p></div>
 <div class="how-item"><h3>Ритм</h3><p>Работаем регулярно, от одного раза в неделю. Ритм важнее интенсивности: именно он даёт опору.</p></div>
-<div class="how-item"><h3>Онлайн и очно</h3><p>Онлайн — из любого города и часового пояса. В Москве можно встречаться очно. Формат выбираешь ты.</p></div>
+<div class="how-item"><h3>Онлайн и очно</h3><p>Онлайн — из любого города и часового пояса. В Москве можно встречаться очно.</p></div>
 <div class="how-item"><h3>Оплата</h3><p>В течение 24 часов после сессии. 55 минут, 2 500 ₽.</p></div>
 <div class="how-item"><h3>Отмена</h3><p>Отменить бесплатно можно за сутки. Если предупредить позже, встреча оплачивается. Если отменяю я, следующая будет бесплатной. В этом вопросе всё зеркально.</p></div>
 <div class="how-item"><h3>Конфиденциальность</h3><p>Всё, что звучит на сессии, остаётся между нами. Я не собираю никаких данных и не прошу анкет, поэтому на сайте нет ни форм, ни записи.</p></div>
-<div class="how-item"><h3>Что понадобится</h3><p>Из технического — только тихое место и наушники. А по сути нужно твоё желание говорить, думать и понемногу брать ответственность за свою жизнь. Эту работу я не сделаю за тебя, но пройду её рядом.</p></div>
+<div class="how-item"><h3>Что понадобится</h3><p>Из технического — только тихое место и стабильный интернет. А по сути нужно твоё желание говорить, чувствовать и понемногу брать ответственность за свою жизнь. Эту работу я не сделаю за тебя, но пройду её рядом.</p></div>
   </div>
 </div></section>
 
@@ -262,6 +263,7 @@ h2.h-display{font-size:clamp(26px,3.6vw,40px);line-height:1.12;margin-bottom:16p
     <a href="https://vk.com/teslapanda">ВКонтакте</a>
     <a href="https://instagram.com/pokureynik">Instagram</a>
   </div>
+  <p class="site-note">* Все определения на сайте — личные. У каждого они свои, и в этом многообразии вся прелесть.</p>
 </div></section>
 
 <footer class="foot"><div class="wrap">
