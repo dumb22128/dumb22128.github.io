@@ -75,4 +75,4 @@ hero → человековость (зелёный блок) → «С чем м
 - [ ] При желании — строка «самозанятый» в подвал; платные лекции/курсы (позже).
 
 ## Технологии и деплой
-Один статический `index.html` (HTML + CSS, ваниль) + `og.jpg` (портрет) + `og-cover.jpg` (OG-превью 1200×630). **Деплой: GitHub Pages**, репозиторий `dumb22128/dumb22128.github.io`, ветка `main`, адрес https://dumb22128.github.io/. В корне `.nojekyll`. Папки `.claude/` (превью) и `drafts/` (черновики) в git не идут — см. `.gitignore`.
+Один статический `index.html` (HTML + CSS, ваниль) + `og.jpg` (портрет) + `og-cover.jpg` (OG-превью 1200×630). **Деплой: GitHub Pages**, репозиторий `dumb22128/dumb22128.github.io`, ветка `main`. Кастомный домен **https://pokureynik.ru/** (файл `CNAME` в корне; старый `dumb22128.github.io` редиректит на него). В корне `.nojekyll`. Папки `.claude/` (превью) и `drafts/` (черновики) в git не идут — см. `.gitignore`.
