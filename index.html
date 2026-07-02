@@ -24,23 +24,44 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Герман Олейник",
-  "url": "https://pokureynik.ru/",
-  "image": "https://pokureynik.ru/og.jpg",
-  "jobTitle": "Студент-практикующий психолог",
-  "description": "Экзистенциально-гуманистический подход. Пришёл в профессию из IT и выгорания. Онлайн или очно в Москве.",
-  "knowsLanguage": "ru",
-  "knowsAbout": ["Экзистенциально-гуманистическая психотерапия", "Тревога", "Выгорание", "Потеря смысла", "Отношения", "Горе и потеря", "Страх перемен"],
-  "areaServed": ["Москва", "Онлайн"],
-  "sameAs": [
-    "https://t.me/pokureynik",
-    "https://vk.com/teslapanda",
-    "https://instagram.com/pokureynik"
-  ],
-  "alumniOf": [
-    {"@type": "CollegeOrUniversity", "name": "Московский институт психоанализа", "url": "https://inpsycho.ru/"},
-    {"@type": "CollegeOrUniversity", "name": "РТУ МИРЭА", "url": "https://www.mirea.ru/"}
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://pokureynik.ru/#person",
+      "name": "Герман Олейник",
+      "url": "https://pokureynik.ru/",
+      "image": "https://pokureynik.ru/og.jpg",
+      "jobTitle": "Студент-практикующий психолог",
+      "description": "Экзистенциально-гуманистический подход. Пришёл в профессию из IT и выгорания. Онлайн или очно в Москве.",
+      "knowsLanguage": "ru",
+      "knowsAbout": ["Экзистенциально-гуманистическая психотерапия", "Тревога", "Выгорание", "Потеря смысла", "Отношения", "Горе и потеря", "Страх перемен"],
+      "sameAs": [
+        "https://t.me/pokureynik",
+        "https://vk.com/teslapanda",
+        "https://instagram.com/pokureynik"
+      ],
+      "alumniOf": [
+        {"@type": "CollegeOrUniversity", "name": "Московский институт психоанализа", "url": "https://inpsycho.ru/"},
+        {"@type": "CollegeOrUniversity", "name": "РТУ МИРЭА", "url": "https://www.mirea.ru/"}
+      ]
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://pokureynik.ru/#practice",
+      "name": "Герман Олейник — психолог",
+      "url": "https://pokureynik.ru/",
+      "image": "https://pokureynik.ru/og-cover.jpg",
+      "provider": {"@id": "https://pokureynik.ru/#person"},
+      "areaServed": ["Москва", "Онлайн"],
+      "serviceType": "Экзистенциально-гуманистическая психотерапия",
+      "availableLanguage": "ru",
+      "description": "Психологические консультации для взрослых: тревога, выгорание, потеря смысла, отношения, горе, страх перемен. Онлайн или очно в Москве.",
+      "sameAs": [
+        "https://t.me/pokureynik",
+        "https://vk.com/teslapanda",
+        "https://instagram.com/pokureynik"
+      ]
+    }
   ]
 }
 </script>
