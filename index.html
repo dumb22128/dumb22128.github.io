@@ -204,16 +204,13 @@ h2.h-display{font-size:clamp(26px,3.6vw,40px);line-height:1.12;margin-bottom:16p
 .anim .need,.anim .how-item,.anim .faq-item{opacity:0;transform:translateY(14px) scale(.985)}
 .anim .need.in,.anim .how-item.in,.anim .faq-item.in{opacity:1;transform:none;transition:opacity .5s cubic-bezier(.23,1,.32,1),transform .5s cubic-bezier(.23,1,.32,1)}
 .btn:active,.head-cta:active,.links a:active{transform:scale(.97)}
-/* оживление зачёркнутых ролей: по одной проявляются + линия прорисовывается */
-.roles s{position:relative}
-.anim .roles s{text-decoration:none;opacity:0;transform:translateY(6px);transition:opacity .4s var(--eo) var(--d,0ms),transform .4s var(--eo) var(--d,0ms)}
-.anim .roles s:after{content:"";position:absolute;left:0;top:56%;width:100%;height:1.5px;background:var(--clay);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--eo) calc(var(--d,0ms) + .16s)}
+/* оживление ролей: по одной проявляются; зачёркивание родное, одинаковой толщины */
+.anim .roles s{opacity:0;transform:translateY(6px);transition:opacity .4s var(--eo) var(--d,0ms),transform .4s var(--eo) var(--d,0ms)}
 .anim .roles.in s{opacity:1;transform:none}
-.anim .roles.in s:after{transform:scaleX(1)}
 @media(prefers-reduced-motion:reduce){
  html{scroll-behavior:auto}
  .anim .reveal,.anim .need,.anim .how-item,.anim .faq-item,.anim .word-w{opacity:1!important;transform:none!important;filter:none!important;transition:none!important}
- .anim .roles s{text-decoration:line-through;opacity:1!important;transform:none!important}.anim .roles s:after{display:none!important}
+ .anim .roles s{opacity:1!important;transform:none!important}
  .btn,.need,.head-cta{transition:none}
  .btn:hover,.need:hover{transform:none}
 }
