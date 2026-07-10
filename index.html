@@ -63,6 +63,14 @@
         "https://vk.com/teslapanda",
         "https://instagram.com/pokureynik"
       ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "Что такое экзистенциально-гуманистический подход простыми словами?", "acceptedAnswer": {"@type": "Answer", "text": "Это разговор о том, как ты проживаешь свою жизнь: про выбор и свободу, отношения, смысл, конечность. Не «чинить поломку», а вместе смотреть, как ты устроен и чего хочешь на самом деле. Ты здесь не диагноз, а живой человек со своей историей."}},
+        {"@type": "Question", "name": "Сколько длится терапия?", "acceptedAnswer": {"@type": "Answer", "text": "Единого срока нет — столько, сколько нужно именно тебе. Кому-то хватает нескольких встреч под конкретный запрос, для кого-то это более долгая работа. Идём в ритме от одного раза в неделю; продолжить или остановиться — всегда твой выбор."}},
+        {"@type": "Question", "name": "Чем психолог отличается от психиатра?", "acceptedAnswer": {"@type": "Answer", "text": "Психиатр — врач: ставит диагнозы и назначает лекарства. Я работаю словом и отношениями, без медикаментов и диагнозов. Если понадобится медицинская помощь, честно скажу и подскажу, к кому обратиться — одно другому не мешает."}}
+      ]
     }
   ]
 }
@@ -167,6 +175,12 @@ h2.h-display{font-size:clamp(26px,3.6vw,40px);line-height:1.12;margin-bottom:16p
 .foot{border-top:1px solid var(--line);padding:34px 0}
 .foot .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13.5px;color:var(--soft)}
 
+.faq-list{border-top:1px solid var(--line);margin-top:30px}
+.faq-item{padding:22px 0;border-bottom:1px solid var(--line)}
+.faq-item dt{font-family:"Unbounded";font-weight:500;font-size:17px;margin-bottom:9px}
+.faq-item dt:before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--clay);margin-right:11px;vertical-align:middle;transform:translateY(-2px)}
+.faq-item dd{color:var(--soft);font-size:16.5px;line-height:1.55;max-width:64ch}
+
 @media(max-width:820px){
  .approach-grid,.about-grid{grid-template-columns:1fr;gap:32px}
  .need-grid{grid-template-columns:1fr}
@@ -180,19 +194,26 @@ h2.h-display{font-size:clamp(26px,3.6vw,40px);line-height:1.12;margin-bottom:16p
  .hero{padding:44px 0 38px}
 }
 
-/* деликатное появление при скролле */
-.reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
-.reveal.in{opacity:1;transform:none}
-.word.reveal{transition-duration:1s}
+/* появление при скролле — reveal-safe (видно без JS), Emil-easing, стаггер блоков */
+.reveal{opacity:1;transform:none;filter:none}
+.anim .reveal{opacity:0;transform:translateY(16px);filter:blur(4px);transition:opacity .6s cubic-bezier(.23,1,.32,1),transform .6s cubic-bezier(.23,1,.32,1),filter .6s cubic-bezier(.23,1,.32,1)}
+.anim .reveal.in{opacity:1;transform:none;filter:none}
+.anim .word.reveal{transition-duration:.8s}
+.anim .word-w{opacity:0;transform:scale(.96);transition:opacity .75s cubic-bezier(.23,1,.32,1) .08s,transform .75s cubic-bezier(.23,1,.32,1) .08s}
+.anim .word.in .word-w{opacity:1;transform:none}
+.anim .need,.anim .how-item,.anim .faq-item{opacity:0;transform:translateY(14px) scale(.985)}
+.anim .need.in,.anim .how-item.in,.anim .faq-item.in{opacity:1;transform:none;transition:opacity .5s cubic-bezier(.23,1,.32,1),transform .5s cubic-bezier(.23,1,.32,1)}
+.btn:active,.head-cta:active,.links a:active{transform:scale(.97)}
 @media(prefers-reduced-motion:reduce){
  html{scroll-behavior:auto}
- .reveal{opacity:1;transform:none;transition:none}
+ .anim .reveal,.anim .need,.anim .how-item,.anim .faq-item,.anim .word-w{opacity:1!important;transform:none!important;filter:none!important;transition:none!important}
  .btn,.need,.head-cta{transition:none}
  .btn:hover,.need:hover{transform:none}
 }
 </style>
 </head>
 <body>
+<script>document.documentElement.classList.add("anim")</script>
 
 <header class="site-head"><div class="wrap">
   <a class="brand" href="#top">Герман Олейник</a>
@@ -289,6 +310,15 @@ h2.h-display{font-size:clamp(26px,3.6vw,40px);line-height:1.12;margin-bottom:16p
   </div>
 </div></section>
 
+<section class="faq reveal" id="faq"><div class="wrap">
+  <h2 class="h-display">Частые вопросы</h2>
+  <dl class="faq-list">
+    <div class="faq-item"><dt>Что такое экзистенциально-гуманистический подход простыми словами?</dt><dd>Это разговор о том, как ты проживаешь свою жизнь: про выбор и свободу, отношения, смысл, конечность. Не «чинить поломку», а вместе смотреть, как ты устроен и чего хочешь на самом деле. Ты здесь не диагноз, а живой человек со своей историей.</dd></div>
+    <div class="faq-item"><dt>Сколько длится терапия?</dt><dd>Единого срока нет — столько, сколько нужно именно тебе. Кому-то хватает нескольких встреч под конкретный запрос, для кого-то это более долгая работа. Идём в ритме от одного раза в неделю; продолжить или остановиться — всегда твой выбор.</dd></div>
+    <div class="faq-item"><dt>Чем психолог отличается от психиатра?</dt><dd>Психиатр — врач: ставит диагнозы и назначает лекарства. Я работаю словом и отношениями, без медикаментов и диагнозов. Если понадобится медицинская помощь, честно скажу и подскажу, к кому обратиться — одно другому не мешает.</dd></div>
+  </dl>
+</div></section>
+
 <section class="quote-band reveal"><div class="wrap">
   <p class="h-display">Делать выбор <b>быть собой</b> — не роскошь, а необходимость.</p>
 </div></section>
@@ -318,18 +348,22 @@ h2.h-display{font-size:clamp(26px,3.6vw,40px);line-height:1.12;margin-bottom:16p
 
 <script>
 (function(){
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
   var els=document.querySelectorAll('.reveal');
-  var mq=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)');
-  if((mq&&mq.matches)||!('IntersectionObserver' in window)){
-    els.forEach(function(e){e.classList.add('in');});
+  var items=document.querySelectorAll('.need,.how-item,.faq-item');
+  if(reduce||!('IntersectionObserver' in window)){
+    [].forEach.call(els,function(e){e.classList.add('in');});
+    [].forEach.call(items,function(e){e.classList.add('in');});
     return;
   }
   var io=new IntersectionObserver(function(entries){
-    entries.forEach(function(en){
-      if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}
-    });
-  },{rootMargin:'0px 0px -10% 0px',threshold:.08});
-  els.forEach(function(e){io.observe(e);});
+    entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});
+  },{rootMargin:'0px 0px -8% 0px',threshold:.08});
+  [].forEach.call(els,function(e){io.observe(e);});
+  var io2=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){if(en.isIntersecting){var el=en.target,i=[].indexOf.call(el.parentNode.children,el);el.style.transitionDelay=(Math.min(i,7)*55)+'ms';el.classList.add('in');io2.unobserve(el);}});
+  },{rootMargin:'0px 0px -6% 0px',threshold:.14});
+  [].forEach.call(items,function(e){io2.observe(e);});
 })();
 </script>
 
