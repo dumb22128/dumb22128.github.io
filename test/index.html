@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru"><head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Герман Олейник — психолог · гибрид-превью</title>
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,7 +32,8 @@ h2.h-display{font-size:clamp(30px,4.6vw,52px);line-height:1.08;margin-bottom:18p
 .sec-lede{color:var(--soft);max-width:56ch;font-size:18px;margin-bottom:44px}
 .bd{color:var(--soft);margin-bottom:16px;max-width:60ch}.bd b{color:var(--ink);font-weight:600}
 
-.site-head{position:sticky;top:0;z-index:40;background:rgba(244,240,230,.82);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.site-head{position:sticky;top:0;z-index:40;background:rgba(244,240,230,.94);-webkit-backdrop-filter:blur(18px) saturate(1.15);backdrop-filter:blur(18px) saturate(1.15);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top)}
+@supports not ((-webkit-backdrop-filter:blur(1px)) or (backdrop-filter:blur(1px))){.site-head{background:rgba(244,240,230,.98)}}
 .site-head .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px}
 .brand{font-family:"Unbounded";font-weight:600;font-size:16px}
 .navlinks{display:flex;align-items:center;gap:22px;font-size:14px;color:var(--soft)}
@@ -48,7 +49,7 @@ h2.h-display{font-size:clamp(30px,4.6vw,52px);line-height:1.08;margin-bottom:18p
 .hero .lede{font-size:clamp(18px,2.1vw,22px);color:var(--soft);max-width:54ch;margin-bottom:36px;line-height:1.5}
 .hero-actions{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
 .btn{background:var(--green);color:#fff;font-weight:500;padding:15px 30px;border-radius:999px;transition:.2s;font-family:"Golos Text"}
-.btn:hover{background:var(--green-br);transform:translateY(-2px)}
+.btn:hover{background:var(--green-br)}
 .hero-meta{font-size:15px;color:var(--soft)}
 
 .word{background:var(--green);color:#F4F1E8;border-radius:32px;text-align:center;margin:0 16px;padding:80px 24px}
@@ -62,7 +63,7 @@ h2.h-display{font-size:clamp(30px,4.6vw,52px);line-height:1.08;margin-bottom:18p
 /* ГИБРИД: «С чем прихожу» нумерованными строками, как у коллеги, но в твоих цветах */
 .need-list{border-top:1px solid var(--line)}
 .need{display:grid;grid-template-columns:64px 1fr;gap:24px;align-items:baseline;padding:26px 4px;border-bottom:1px solid var(--line);transition:.2s;border-radius:14px}
-.need:hover{background:var(--bg2);box-shadow:0 20px 40px -30px rgba(26,38,32,.4)}
+.need:hover{background:var(--bg2)}
 .need .idx{font-family:"Unbounded";font-weight:600;font-size:16px;color:var(--clay);letter-spacing:.02em}
 .need h3{font-family:"Unbounded";font-size:clamp(19px,2.2vw,23px);font-weight:500;margin-bottom:8px}
 .need p{color:var(--soft);font-size:16.5px;line-height:1.5;max-width:64ch}
@@ -91,7 +92,7 @@ h2.h-display{font-size:clamp(30px,4.6vw,52px);line-height:1.08;margin-bottom:18p
 .dip-head p{color:var(--soft);font-size:15.5px;margin-top:6px}
 .dip-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .dip{cursor:pointer;background:var(--bg2);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:.2s;text-align:left}
-.dip:hover{transform:translateY(-3px);box-shadow:0 20px 40px -28px rgba(26,38,32,.5);border-color:var(--clay)}
+.dip:hover{border-color:var(--clay)}
 .dip .thumb{aspect-ratio:3/4;background:linear-gradient(150deg,#eef1e9,#e3e8dd);display:flex;align-items:center;justify-content:center;position:relative}
 .dip .thumb span{font-family:"Unbounded";font-size:11px;letter-spacing:.1em;color:var(--green-br);text-transform:uppercase;border:1px dashed var(--green-br);padding:6px 10px;border-radius:8px}
 .dip .thumb::after{content:"⤢";position:absolute;right:10px;bottom:10px;width:28px;height:28px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;opacity:0;transition:.2s}
@@ -118,7 +119,7 @@ h2.h-display{font-size:clamp(30px,4.6vw,52px);line-height:1.08;margin-bottom:18p
 /* НОВОЕ: Заметки / блог */
 .notes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .note{background:var(--bg2);border:1px solid var(--line);border-radius:20px;padding:26px 26px;display:flex;flex-direction:column;transition:.2s}
-.note:hover{transform:translateY(-3px);box-shadow:0 20px 40px -28px rgba(26,38,32,.45);border-color:var(--clay)}
+.note:hover{border-color:var(--clay)}
 .note .cat{font-family:"Unbounded";font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--clay);margin-bottom:14px}
 .note h3{font-family:"Unbounded";font-size:19px;font-weight:500;line-height:1.25;margin-bottom:12px}
 .note p{color:var(--soft);font-size:15.5px;line-height:1.5;margin-bottom:18px;flex:1}
@@ -151,7 +152,7 @@ h2.h-display{font-size:clamp(30px,4.6vw,52px);line-height:1.08;margin-bottom:18p
 .faq-item dd{color:var(--soft);font-size:16.5px;line-height:1.55;max-width:64ch}
 
 /* НОВОЕ: кнопка «наверх» */
-.totop{position:fixed;right:22px;bottom:22px;z-index:50;width:48px;height:48px;border-radius:50%;border:none;background:var(--green);color:#fff;font-size:20px;cursor:pointer;box-shadow:0 12px 30px -10px rgba(26,38,32,.6);opacity:0;pointer-events:none;transform:translateY(10px);transition:.25s}
+.totop{position:fixed;right:22px;bottom:calc(22px + env(safe-area-inset-bottom));z-index:50;width:48px;height:48px;border-radius:50%;border:none;background:var(--green);color:#fff;font-size:20px;cursor:pointer;box-shadow:0 12px 30px -10px rgba(26,38,32,.6);opacity:0;pointer-events:none;transform:translateY(10px);transition:.25s}
 .totop.show{opacity:1;pointer-events:auto;transform:none}
 .totop:hover{background:var(--green-br)}
 
@@ -170,8 +171,8 @@ h2.h-display{font-size:clamp(30px,4.6vw,52px);line-height:1.08;margin-bottom:18p
 }
 
 .reveal{opacity:1;transform:none;filter:none}
-.anim .reveal{opacity:0;transform:translateY(16px);filter:blur(4px);transition:opacity .6s var(--eo),transform .6s var(--eo),filter .6s var(--eo)}
-.anim .reveal.in{opacity:1;transform:none;filter:none}
+.anim .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s var(--eo),transform .6s var(--eo)}
+.anim .reveal.in{opacity:1;transform:none}
 .anim .word.reveal{transition-duration:.8s}
 .anim .word-w{opacity:0;transform:scale(.96);transition:opacity .75s var(--eo) .08s,transform .75s var(--eo) .08s}
 .anim .word.in .word-w{opacity:1;transform:none}
@@ -186,6 +187,15 @@ h2.h-display{font-size:clamp(30px,4.6vw,52px);line-height:1.08;margin-bottom:18p
  .anim .roles s{opacity:1!important;transform:none!important}
  .btn,.need,.head-cta{transition:none}
  .btn:hover,.need:hover{transform:none}
+}
+/* тач-устройства (iPhone): ховеры не «залипают» после тапа */
+@media (hover:none){
+ .btn:hover,.head-cta:hover,.totop:hover{background:var(--green)}
+ .need:hover{background:transparent}
+ .dip:hover,.note:hover{border-color:var(--line)}
+ .links a:hover{background:var(--bg2);color:inherit;border-color:var(--line)}
+ .navlinks a:hover,.su a:hover{color:var(--soft)}
+ .dip:hover .thumb::after{opacity:0}
 }
 </style>
 </head>
