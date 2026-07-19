@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Герман Олейник — психолог · гибрид-превью</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F4F0E6;--bg2:#FFFEFB;--ink:#1A2620;--soft:#5e655e;--green:#2E4C3C;--green-br:#527a66;--clay:#D98A3F;--line:#E7E0D3;--eo:cubic-bezier(.23,1,.32,1)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:clip;scroll-padding-top:76px}
+body{font-family:"Golos Text",system-ui,sans-serif;font-size:18px;line-height:1.62;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:clip}
+h1,h2,h3,.pull,.verse{overflow-wrap:break-word}
+.word-w{overflow-wrap:normal;white-space:nowrap}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+s{text-decoration-thickness:1.5px;text-decoration-color:rgba(46,76,60,.5)}
+::selection{background:var(--green-br);color:#fff}
+.wrap{max-width:1100px;margin:0 auto;padding:0 32px}
+.h-display{font-family:"Unbounded",sans-serif;font-weight:600;letter-spacing:-.01em}
+:focus-visible{outline:2px solid var(--green);outline-offset:3px;border-radius:6px}
+
+/* ГИБРИД: больше воздуха между секциями + строгая «бровь» с номером */
+section{padding:72px 0}
+.approach,.edu,.contact{padding-top:24px}
+.kick{font-family:"Unbounded";font-size:12px;font-weight:600;letter-spacing:.14em;color:var(--clay);margin-bottom:22px;text-transform:uppercase;display:flex;align-items:center;gap:12px}
+.kick::before{content:attr(data-n);font-size:12px;color:var(--green-br);font-weight:600;letter-spacing:.05em}
+.kick.plain::before{content:none}
+h2.h-display{font-size:clamp(30px,4.6vw,52px);line-height:1.08;margin-bottom:18px;letter-spacing:-.02em}
+.sec-lede{color:var(--soft);max-width:56ch;font-size:18px;margin-bottom:44px}
+.bd{color:var(--soft);margin-bottom:16px;max-width:60ch}.bd b{color:var(--ink);font-weight:600}
+
+.site-head{position:sticky;top:0;z-index:40;background:rgba(244,240,230,.82);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.site-head .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px}
+.brand{font-family:"Unbounded";font-weight:600;font-size:16px}
+.navlinks{display:flex;align-items:center;gap:22px;font-size:14px;color:var(--soft)}
+.navlinks a:hover{color:var(--ink)}
+.navlinks a.active{color:var(--green);font-weight:500}
+.head-cta{background:var(--green);color:#fff!important;padding:9px 18px;border-radius:999px;font-weight:500;font-size:13.5px}
+.head-cta:hover{background:var(--green-br)}
+@media(max-width:920px){.navlinks a:not(.head-cta){display:none}}
+
+.hero{padding:64px 0 52px}
+.hero h1{font-size:clamp(34px,5vw,60px);line-height:1.06;max-width:19ch;margin-bottom:26px;letter-spacing:-.02em}
+.hero h1 em{font-style:normal;color:var(--clay)}
+.hero .lede{font-size:clamp(18px,2.1vw,22px);color:var(--soft);max-width:54ch;margin-bottom:36px;line-height:1.5}
+.hero-actions{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.btn{background:var(--green);color:#fff;font-weight:500;padding:15px 30px;border-radius:999px;transition:.2s;font-family:"Golos Text"}
+.btn:hover{background:var(--green-br);transform:translateY(-2px)}
+.hero-meta{font-size:15px;color:var(--soft)}
+
+.word{background:var(--green);color:#F4F1E8;border-radius:32px;text-align:center;margin:0 16px;padding:80px 24px}
+.word .kick{color:#bcd2c7;justify-content:center}.word .kick s{color:var(--clay);text-decoration-color:var(--clay)}
+.word .kick::before{color:#8fae9f}
+.word-w{font-size:clamp(30px,8.2vw,98px);line-height:1.02;margin-bottom:8px}
+.word-pos{font-family:"Unbounded";font-size:11px;letter-spacing:.06em;color:#bcd2c7;margin-bottom:24px}
+.word-def{font-size:clamp(20px,2.8vw,28px);line-height:1.42;max-width:32ch;margin:0 auto 18px;font-weight:500}
+.word-base{font-size:16px;color:var(--clay);max-width:42ch;margin:0 auto}.word-base b{color:var(--clay);font-weight:600}
+
+/* ГИБРИД: «С чем прихожу» нумерованными строками, как у коллеги, но в твоих цветах */
+.need-list{border-top:1px solid var(--line)}
+.need{display:grid;grid-template-columns:64px 1fr;gap:24px;align-items:baseline;padding:26px 4px;border-bottom:1px solid var(--line);transition:.2s;border-radius:14px}
+.need:hover{background:var(--bg2);box-shadow:0 20px 40px -30px rgba(26,38,32,.4)}
+.need .idx{font-family:"Unbounded";font-weight:600;font-size:16px;color:var(--clay);letter-spacing:.02em}
+.need h3{font-family:"Unbounded";font-size:clamp(19px,2.2vw,23px);font-weight:500;margin-bottom:8px}
+.need p{color:var(--soft);font-size:16.5px;line-height:1.5;max-width:64ch}
+.need-note{margin-top:34px;color:var(--soft)}.need-note a{color:var(--green);font-weight:600;border-bottom:2px solid var(--clay)}
+
+.approach-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
+.approach-quote{background:var(--clay);color:#3a2114;border-radius:24px;padding:42px 38px}
+.pull{font-family:"Unbounded";font-weight:600;font-size:clamp(23px,3vw,32px);line-height:1.2}
+.pull-cap{margin-top:18px;font-size:15px;opacity:.78}
+
+.about-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:54px;align-items:center}
+.portrait{border-radius:28px;aspect-ratio:4/5;object-fit:cover;width:100%;box-shadow:0 30px 60px -32px rgba(26,38,32,.45)}
+.who-q{font-family:"Unbounded";font-size:13px;color:var(--clay);margin-bottom:14px;text-transform:lowercase}
+.roles{display:flex;flex-wrap:wrap;align-items:baseline;gap:12px;margin-bottom:14px;line-height:1.3}
+.roles s{color:var(--soft);font-size:18px;text-decoration-color:var(--clay)}
+.who-intro{color:var(--soft);margin-bottom:10px;font-size:16.5px}
+
+.row{display:grid;grid-template-columns:128px 1fr;gap:24px;padding:20px 0;border-top:1px solid var(--line)}
+.row:last-child{border-bottom:1px solid var(--line)}
+.yr{font-family:"Unbounded";font-size:13px;color:var(--clay)}.yr .now{display:block;color:var(--green-br);font-size:11px;margin-top:4px;font-family:"Golos Text"}
+.ti{font-weight:600;font-size:16.5px}.su{color:var(--soft);font-size:15px;margin-top:3px}.su a{border-bottom:1px solid var(--green-br)}.su a:hover{color:var(--green)}
+
+/* НОВОЕ: галерея дипломов + лайтбокс */
+.dip-head{margin-top:44px;margin-bottom:20px}
+.dip-head h3{font-family:"Unbounded";font-size:18px;font-weight:500}
+.dip-head p{color:var(--soft);font-size:15.5px;margin-top:6px}
+.dip-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.dip{cursor:pointer;background:var(--bg2);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:.2s;text-align:left}
+.dip:hover{transform:translateY(-3px);box-shadow:0 20px 40px -28px rgba(26,38,32,.5);border-color:var(--clay)}
+.dip .thumb{aspect-ratio:3/4;background:linear-gradient(150deg,#eef1e9,#e3e8dd);display:flex;align-items:center;justify-content:center;position:relative}
+.dip .thumb span{font-family:"Unbounded";font-size:11px;letter-spacing:.1em;color:var(--green-br);text-transform:uppercase;border:1px dashed var(--green-br);padding:6px 10px;border-radius:8px}
+.dip .thumb::after{content:"⤢";position:absolute;right:10px;bottom:10px;width:28px;height:28px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;opacity:0;transition:.2s}
+.dip:hover .thumb::after{opacity:1}
+.dip .cap{padding:12px 14px}
+.dip .cap b{display:block;font-size:14px;font-weight:600}
+.dip .cap small{color:var(--soft);font-size:12.5px}
+.lb{position:fixed;inset:0;z-index:80;background:rgba(20,28,24,.78);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:28px}
+.lb.open{display:flex}
+.lb-card{background:var(--bg2);border-radius:20px;max-width:520px;width:100%;overflow:hidden;box-shadow:0 40px 80px -30px rgba(0,0,0,.6)}
+.lb-img{aspect-ratio:3/4;background:linear-gradient(150deg,#eef1e9,#dbe2d6);display:flex;align-items:center;justify-content:center;color:var(--green-br);font-family:"Unbounded";font-size:13px;letter-spacing:.08em;text-align:center;padding:20px}
+.lb-cap{padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.lb-cap b{font-family:"Unbounded";font-weight:500;font-size:15px}
+.lb-cap small{color:var(--soft)}
+.lb-close{position:absolute;top:20px;right:22px;width:42px;height:42px;border-radius:50%;border:none;background:var(--bg2);color:var(--ink);font-size:20px;cursor:pointer}
+
+.how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.how-item{background:var(--bg2);border:1px solid var(--line);border-radius:20px;padding:24px 26px}
+.how-item.big{grid-column:1/-1;background:var(--green);color:#F4F1E8;border-color:var(--green)}
+.how-item.big p{color:#cdded5;max-width:70ch}
+.how-item h3{font-family:"Unbounded";font-size:15px;font-weight:500;margin-bottom:9px}
+.how-item p{color:var(--soft);font-size:15.5px;line-height:1.5}
+
+/* НОВОЕ: Заметки / блог */
+.notes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.note{background:var(--bg2);border:1px solid var(--line);border-radius:20px;padding:26px 26px;display:flex;flex-direction:column;transition:.2s}
+.note:hover{transform:translateY(-3px);box-shadow:0 20px 40px -28px rgba(26,38,32,.45);border-color:var(--clay)}
+.note .cat{font-family:"Unbounded";font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--clay);margin-bottom:14px}
+.note h3{font-family:"Unbounded";font-size:19px;font-weight:500;line-height:1.25;margin-bottom:12px}
+.note p{color:var(--soft);font-size:15.5px;line-height:1.5;margin-bottom:18px;flex:1}
+.note .more{color:var(--green);font-weight:600;font-size:14.5px;border-bottom:2px solid var(--clay);align-self:flex-start}
+.notes-note{margin-top:28px;color:var(--soft);font-size:15px}
+
+.quote-band{text-align:center;padding:56px 0}
+.quote-band p{font-family:"Unbounded";font-weight:500;font-size:clamp(22px,3.2vw,36px);line-height:1.24;max-width:22ch;margin:0 auto;color:var(--ink)}
+.quote-band p b{color:var(--clay);font-weight:500}
+
+.poem-card{background:var(--ink);color:#EFEFE9;border-radius:28px;padding:56px clamp(30px,5vw,68px)}
+.poem-card .kick{color:var(--clay)}.poem-card .kick::before{color:#8f948e}
+.poem-intro{color:#b9beb8;margin-bottom:30px;max-width:56ch}
+.verse{font-family:"Unbounded";font-weight:400;font-size:clamp(18px,2.4vw,25px);line-height:1.55}
+.verse .q{color:var(--clay)}
+.poem-by{font-size:14px;color:#8f948e;margin-top:26px}
+
+.contact-lede{color:var(--soft);max-width:52ch;margin-bottom:26px}
+.links{display:flex;gap:14px;flex-wrap:wrap}
+.links a{background:var(--bg2);border:1px solid var(--line);padding:12px 24px;border-radius:999px;font-weight:500;font-size:15px;transition:.2s}
+.links a:hover{background:var(--green);color:#fff;border-color:var(--green)}
+.site-note{margin-top:26px;font-size:13.5px;line-height:1.5;color:var(--soft);max-width:54ch}
+.foot{border-top:1px solid var(--line);padding:34px 0}
+.foot .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13.5px;color:var(--soft)}
+
+.faq-list{border-top:1px solid var(--line);margin-top:30px}
+.faq-item{padding:22px 0;border-bottom:1px solid var(--line)}
+.faq-item dt{font-family:"Unbounded";font-weight:500;font-size:17px;margin-bottom:9px}
+.faq-item dt:before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--clay);margin-right:11px;vertical-align:middle;transform:translateY(-2px)}
+.faq-item dd{color:var(--soft);font-size:16.5px;line-height:1.55;max-width:64ch}
+
+/* НОВОЕ: кнопка «наверх» */
+.totop{position:fixed;right:22px;bottom:22px;z-index:50;width:48px;height:48px;border-radius:50%;border:none;background:var(--green);color:#fff;font-size:20px;cursor:pointer;box-shadow:0 12px 30px -10px rgba(26,38,32,.6);opacity:0;pointer-events:none;transform:translateY(10px);transition:.25s}
+.totop.show{opacity:1;pointer-events:auto;transform:none}
+.totop:hover{background:var(--green-br)}
+
+@media(max-width:820px){
+ .approach-grid,.about-grid{grid-template-columns:1fr;gap:32px}
+ .how-grid,.notes-grid{grid-template-columns:1fr}
+ .dip-grid{grid-template-columns:repeat(2,1fr)}
+ .word{margin:0 8px;border-radius:24px}
+}
+@media(max-width:680px){
+ .wrap{padding:0 20px}section{padding:52px 0}.row{grid-template-columns:1fr;gap:4px}
+ .word{padding:56px 16px}.word-w{font-size:clamp(24px,7.4vw,60px)}
+ .need{grid-template-columns:44px 1fr;gap:14px}
+ .approach-quote{padding:32px 26px}.poem-card{padding:44px 24px}
+ .hero{padding:48px 0 40px}
+}
+
+.reveal{opacity:1;transform:none;filter:none}
+.anim .reveal{opacity:0;transform:translateY(16px);filter:blur(4px);transition:opacity .6s var(--eo),transform .6s var(--eo),filter .6s var(--eo)}
+.anim .reveal.in{opacity:1;transform:none;filter:none}
+.anim .word.reveal{transition-duration:.8s}
+.anim .word-w{opacity:0;transform:scale(.96);transition:opacity .75s var(--eo) .08s,transform .75s var(--eo) .08s}
+.anim .word.in .word-w{opacity:1;transform:none}
+.anim .need,.anim .how-item,.anim .faq-item,.anim .note,.anim .dip{opacity:0;transform:translateY(14px) scale(.985)}
+.anim .need.in,.anim .how-item.in,.anim .faq-item.in,.anim .note.in,.anim .dip.in{opacity:1;transform:none;transition:opacity .5s var(--eo),transform .5s var(--eo)}
+.btn:active,.head-cta:active,.links a:active{transform:scale(.97)}
+.anim .roles s{opacity:0;transform:translateY(6px);transition:opacity .4s var(--eo) var(--d,0ms),transform .4s var(--eo) var(--d,0ms)}
+.anim .roles.in s{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ .anim .reveal,.anim .need,.anim .how-item,.anim .faq-item,.anim .note,.anim .dip,.anim .word-w{opacity:1!important;transform:none!important;filter:none!important;transition:none!important}
+ .anim .roles s{opacity:1!important;transform:none!important}
+ .btn,.need,.head-cta{transition:none}
+ .btn:hover,.need:hover{transform:none}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add("anim")</script>
+
+<header class="site-head"><div class="wrap">
+  <a class="brand" href="#top">Герман Олейник</a>
+  <nav class="navlinks">
+    <a href="#needs">запросы</a>
+    <a href="#approach">подход</a>
+    <a href="#about">обо мне</a>
+    <a href="#edu">образование</a>
+    <a href="#how">как устроено</a>
+    <a href="#notes">заметки</a>
+    <a class="head-cta" href="#book">Записаться&nbsp;→</a>
+  </nav>
+</div></header>
+
+<section class="hero" id="top"><div class="wrap">
+  <p class="kick plain">// 5 лет назад писал автотесты, сейчас помогаю людям переписать кое-что важнее</p>
+  <h1 class="h-display">Психотерапия — это искусство задавать вопросы и <em>быть в отношениях</em>, где на них не страшно отвечать.</h1>
+  <p class="lede">Герман Олейник — студент-практикующий психолог, экзистенциально-гуманистический подход. Я пришёл в профессию из IT и выгорания, поэтому знаю, как порой трудно меняться.</p>
+  <div class="hero-actions">
+    <a class="btn" id="book" href="https://t.me/pokureynik?text=Здравствуйте,%20Герман!%20Хочу%20записаться%20на%20консультацию.%0A%0AМеня%20зовут:%20%0AЗапрос%20(с%20чем%20хочу%20прийти):%20%0AФормат%20(онлайн%20/%20очно%20в%20Москве):%20%0AУдобное%20время:%20">Записаться на консультацию</a>
+    <span class="hero-meta">онлайн или очно в Москве · 55 минут · 2&nbsp;500&nbsp;₽</span>
+  </div>
+</div></section>
+
+<section class="word reveal"><div class="wrap">
+  <p class="kick plain"><s>человечность</s></p>
+  <div class="word-w h-display">Человековость</div>
+  <p class="word-pos">сущ. · от «человек»</p>
+  <p class="word-def">способность осознавать свою конечность — и всё равно стремиться прожить жизнь достойно и увлекательно, делая то, что нравится, с горящим сердцем. Чтобы однажды ответить «да» на предложение повторить это путешествие.</p>
+  <p class="word-base">а в нём всегда теплее, когда есть с кем <b>смеяться, рыдать и обниматься</b>.</p>
+</div></section>
+
+<section class="needs reveal" id="needs"><div class="wrap">
+  <p class="kick" data-n="01">С чем можно прийти</p>
+  <h2 class="h-display">Живые истории, а не диагнозы</h2>
+  <p class="sec-lede">За каждым запросом скрываются живые человеческие истории. Если что-то близко хотя бы в одном пункте и есть желание узнать себя — этого достаточно, чтобы обратиться.</p>
+  <div class="need-list">
+    <article class="need"><div class="idx">01</div><div><h3>Отношения</h3><p>С собой, с близкими, с партнёром, с миром. Когда рядом с людьми то тесно, то одиноко, и непонятно, как иначе.</p></div></article>
+    <article class="need"><div class="idx">02</div><div><h3>Тревога</h3><p>Тревожиться нормально. Но иногда тревога не выключается и начинает фоном жить за тебя.</p></div></article>
+    <article class="need"><div class="idx">03</div><div><h3>Потеря и горе</h3><p>Расставание, развод, уход близкого, потеря работы или опоры. Когда привычная почва ушла из-под ног.</p></div></article>
+    <article class="need"><div class="idx">04</div><div><h3>Критика, стыд, вина</h3><p>Когда внутренний критик громче всех, неловко заявить о себе, а за свои же границы бывает стыдно.</p></div></article>
+    <article class="need"><div class="idx">05</div><div><h3>Потеря смысла</h3><p>Снаружи «всё ок», а внутри пусто. Кажется, что живёшь чужую жизнь и не на своём месте.</p></div></article>
+    <article class="need"><div class="idx">06</div><div><h3>Выгорание</h3><p>Спринты, дедлайны, KPI, а ты где-то в самом конце этого списка.</p></div></article>
+    <article class="need"><div class="idx">07</div><div><h3>Страх перемен</h3><p>Давно пора что-то поменять: работу, город, привычный сценарий. Но сделать первый шаг страшно.</p></div></article>
+    <article class="need"><div class="idx">08</div><div><h3>Тело и здоровье</h3><p>Когда еда стала способом справляться с чувствами, а с собственным телом всё труднее найти общий язык.</p></div></article>
+  </div>
+  <p class="need-note">Не нашёл здесь свой запрос? Это в порядке вещей. <a href="#book">Напиши и обсудим лично</a>.</p>
+</div></section>
+
+<section class="approach reveal" id="approach"><div class="wrap">
+  <p class="kick" data-n="02">Как я работаю</p>
+  <div class="approach-grid">
+  <div class="approach-text">
+    <h2 class="h-display">Рядом, а не сверху</h2>
+    <p class="bd">Экзистенциально-гуманистический подход — это разговор лицом к лицу, где ты не набор симптомов, а живой человек со своей историей и выбором.</p>
+    <p class="bd"><b>Человек человеку — сиблинг:</b> я рядом, а не сверху, без оценок и ярлыков.</p>
+    <p class="bd">Готовых ответов у меня нет — их попросту не существует и у каждого свой. Но я могу быть близко и помогать искать твой.</p>
+  </div>
+  <aside class="approach-quote">
+    <p class="pull h-display">Диалог — это касание двух психик.</p>
+    <p class="pull-cap">— так я понимаю эту работу</p>
+  </aside>
+</div></div></section>
+
+<section class="about reveal" id="about"><div class="wrap"><div class="about-grid">
+  <div class="about-media"><picture style="display:block"><source srcset="/lol1.webp" type="image/webp"><img class="portrait" src="/lol1.jpg" width="548" height="685" loading="lazy" decoding="async" alt="Герман Олейник"></picture></div>
+  <div class="about-text">
+    <p class="who-q">кто я?</p>
+    <p class="roles"><s>гений</s> <s>миллиардер</s> <s>филантроп</s> <s>футболист</s> <s>каратист</s> <s>психолог</s> <s>комик</s> <s>обезьяна</s> <s>пёс</s> <s>монах</s> <s>коллега</s> <s>студент</s> <s>брат</s> <s>мужчина</s> <s>поэт</s> <s>прозаик</s> <s>сын</s> <s>друг</s></p>
+    <p class="who-intro">Честно говоря, до сих пор трудно ответить на этот вопрос. Поэтому просто:</p>
+    <h2 class="h-display">Обо мне</h2>
+    <p class="bd">В психологию я пришёл не по прямой. За плечами инженерное образование, около трёх лет в IT (тестирование и разработка) и порядка полутора лет в международных продажах.</p>
+    <p class="bd">Корпоративный мир я знаю изнутри: спринты, дедлайны, KPI, многозадачность, выгорание. Знаю и то, как страшно решиться всё поменять, потому что проходил это сам. Поэтому истории про карьеру, «не своё место» и поиск себя мне понятны без перевода. Я верю, что меняться и переосмыслять жизнь можно в любом возрасте и из любой точки — какой бы ни была предыстория. Поэтому работаю бережно и в партнёрстве: мы идём с той скоростью и в те темы, к которым есть готовность.</p>
+    <p class="bd">С 2026 года веду частную практику под регулярной супервизией и с личной терапией с 2024-го. То, через что проходят люди, знакомо мне и с другой стороны кресла.</p>
+  </div>
+</div></div></section>
+
+<section class="edu reveal" id="edu"><div class="wrap">
+  <p class="kick" data-n="03">Образование</p>
+  <h2 class="h-display">Чему учусь и где учился</h2>
+  <div class="edu-list">
+    <div class="row"><div class="yr">2025<span class="now">учусь сейчас</span></div><div><div class="ti">Магистратура · Консультативная психология</div><div class="su"><a href="https://inpsycho.ru/" target="_blank" rel="noopener">Московский институт психоанализа</a></div></div></div>
+    <div class="row"><div class="yr">2026<span class="now">учусь сейчас</span></div><div><div class="ti">Профпереподготовка · Экзистенциально-гуманистический психотерапевт</div><div class="su"><a href="https://existence-centre.ru/" target="_blank" rel="noopener">МЦПКиП «ЭКЗИСТЕНЦИЯ»</a></div></div></div>
+    <div class="row"><div class="yr">2024</div><div><div class="ti">Магистратура · Системный анализ и управление</div><div class="su"><a href="https://www.mirea.ru/" target="_blank" rel="noopener">РТУ МИРЭА</a></div></div></div>
+    <div class="row"><div class="yr">2022</div><div><div class="ti">Бакалавриат · Информатика и вычислительная техника</div><div class="su"><a href="https://www.mirea.ru/" target="_blank" rel="noopener">РТУ МИРЭА</a></div></div></div>
+  </div>
+
+  <div class="dip-head">
+    <h3>Дипломы и документы</h3>
+    <p>Открыто и по-честному. Нажми, чтобы посмотреть крупнее. <em style="color:var(--clay)">(в превью — заглушки; сюда подставим твои сканы)</em></p>
+  </div>
+  <div class="dip-grid">
+    <button class="dip" data-title="Магистратура · Консультативная психология" data-sub="Московский институт психоанализа · 2025–2028"><span class="thumb"><span>скан диплома</span></span><span class="cap"><b>Консультативная психология</b><small>Институт психоанализа</small></span></button>
+    <button class="dip" data-title="Профпереподготовка · Экзистенциально-гуманистический психотерапевт" data-sub="МЦПКиП «ЭКЗИСТЕНЦИЯ» · 2026–2028"><span class="thumb"><span>скан диплома</span></span><span class="cap"><b>Экз.-гум. психотерапевт</b><small>«ЭКЗИСТЕНЦИЯ»</small></span></button>
+    <button class="dip" data-title="Магистратура · Системный анализ и управление" data-sub="РТУ МИРЭА · 2024"><span class="thumb"><span>скан диплома</span></span><span class="cap"><b>Системный анализ</b><small>РТУ МИРЭА</small></span></button>
+    <button class="dip" data-title="Бакалавриат · Информатика и вычислительная техника" data-sub="РТУ МИРЭА · 2022"><span class="thumb"><span>скан диплома</span></span><span class="cap"><b>Информатика и ВТ</b><small>РТУ МИРЭА</small></span></button>
+  </div>
+</div></section>
+
+<section class="how reveal" id="how"><div class="wrap">
+  <p class="kick" data-n="04">Как всё устроено</p>
+  <h2 class="h-display">Просто и по-человечески</h2>
+  <p class="sec-lede">Никаких форм и сложных правил. Вот всё, что важно знать заранее.</p>
+  <div class="how-grid">
+    <div class="how-item big"><h3>Первая встреча</h3><p>Знакомство. Ты рассказываешь, что привело; я слушаю и задаю вопросы. Расскажу и о себе: как устроена работа и в чём особенности подхода. Вместе посмотрим, подходим ли мы друг другу.</p></div>
+    <div class="how-item"><h3>Ритм</h3><p>Работаем регулярно, от одного раза в неделю. Ритм важнее интенсивности: именно он даёт опору.</p></div>
+    <div class="how-item"><h3>Онлайн и очно</h3><p>Онлайн из любого города и часового пояса. В Москве можно встречаться очно.</p></div>
+    <div class="how-item"><h3>Оплата</h3><p>В течение 24 часов после сессии. 55 минут, 2 500 ₽.</p></div>
+    <div class="how-item"><h3>Отмена</h3><p>Отменить бесплатно можно за сутки. Если предупредить позже, встреча оплачивается. Если отменяю я, следующая будет бесплатной. В этом вопросе всё зеркально.</p></div>
+    <div class="how-item"><h3>Конфиденциальность</h3><p>Всё, что звучит на сессии, остаётся между нами. Я не собираю никаких данных и не прошу анкет, поэтому на сайте нет ни форм, ни записи.</p></div>
+    <div class="how-item"><h3>Что понадобится</h3><p>Из технического — только тихое место и стабильный интернет. А по сути нужно твоё желание говорить, чувствовать и понемногу брать ответственность за свою жизнь. Эту работу я не сделаю за тебя, но пройду её рядом.</p></div>
+  </div>
+</div></section>
+
+<section class="notes reveal" id="notes"><div class="wrap">
+  <p class="kick" data-n="05">Заметки</p>
+  <h2 class="h-display">Что я думаю вслух</h2>
+  <p class="sec-lede">Короткие тексты и катрены — вне кабинета. Не экспертный блог ради SEO, а живые мысли о человеке и о том, как я эту работу вижу. <em style="color:var(--clay)">(в превью — черновые карточки; наполним твоими реальными текстами)</em></p>
+  <div class="notes-grid">
+    <article class="note"><div class="cat">О работе</div><h3>Диалог — это касание двух психик</h3><p>Почему разговор в кабинете лечит не советом, а самим фактом, что рядом есть кто-то живой и внимательный.</p><a class="more" href="#">Читать →</a></article>
+    <article class="note"><div class="cat">О себе</div><h3>Стих — фотография души</h3><p>Пишу катрены. Иногда строчка говорит о состоянии точнее, чем целая сессия объяснений. Немного о том, зачем поэзия психологу.</p><a class="more" href="#">Читать →</a></article>
+    <article class="note"><div class="cat">О переменах</div><h3>Из кода в человека</h3><p>Как я уходил из IT и продаж в психологию — и почему «поздно» не бывает. Меняться можно в любом возрасте и из любой точки.</p><a class="more" href="#">Читать →</a></article>
+  </div>
+  <p class="notes-note">Пишу нечасто, зато по делу. Новые заметки анонсирую в <a href="https://t.me/pokureynik" style="color:var(--green);border-bottom:2px solid var(--clay)">Telegram</a>.</p>
+</div></section>
+
+<section class="faq reveal" id="faq"><div class="wrap">
+  <p class="kick" data-n="06">Частые вопросы</p>
+  <h2 class="h-display">Коротко о главном</h2>
+  <dl class="faq-list">
+    <div class="faq-item"><dt>Что такое экзистенциально-гуманистический подход простыми словами?</dt><dd>Это разговор о том, как ты проживаешь свою жизнь: про выбор и свободу, отношения, смысл, конечность. Не «чинить поломку», а вместе смотреть, как ты устроен и чего хочешь на самом деле. Ты здесь не диагноз, а живой человек со своей историей.</dd></div>
+    <div class="faq-item"><dt>Сколько длится терапия?</dt><dd>Единого срока нет — столько, сколько нужно именно тебе. Кому-то хватает нескольких встреч под конкретный запрос, для кого-то это более долгая работа. Идём в ритме от одного раза в неделю; продолжить или остановиться — всегда твой выбор.</dd></div>
+    <div class="faq-item"><dt>Чем психолог отличается от психиатра?</dt><dd>Психиатр — врач: ставит диагнозы и назначает лекарства. Я работаю словом и отношениями, без медикаментов и диагнозов. Если понадобится медицинская помощь, честно скажу и подскажу, к кому обратиться — одно другому не мешает.</dd></div>
+  </dl>
+</div></section>
+
+<section class="quote-band reveal"><div class="wrap">
+  <p class="h-display">Делать выбор <b>быть собой</b> — не роскошь, а необходимость.</p>
+</div></section>
+
+<section class="poem reveal"><div class="wrap"><div class="poem-card">
+  <p class="kick plain">вне работы</p>
+  <p class="poem-intro">Вне кабинета я пишу катрены и люблю стихи — для меня стих это фотография души. Закончу тем, что близко:</p>
+  <p class="verse h-display">Под копны волос проникнет ли удар?<br>Мысль одна под волосища вложена:<br><span class="q">«Причесываться? Зачем же?!</span><br><span class="q">На время не стоит труда,</span><br><span class="q">а вечно</span><br><span class="q">причесанным быть</span><br><span class="q">невозможно».</span></p>
+  <p class="poem-by">— Владимир Маяковский</p>
+</div></div></section>
+
+<section class="contact reveal" id="contact"><div class="wrap">
+  <p class="kick" data-n="07">Связь</p>
+  <h2 class="h-display">Связь со мной</h2>
+  <p class="contact-lede">Напиши, если чувствуешь, что хочешь. Можно с готовым шаблоном — так проще начать.</p>
+  <div class="hero-actions" style="margin-bottom:22px">
+    <a class="btn" href="https://t.me/pokureynik?text=Здравствуйте,%20Герман!%20Хочу%20записаться%20на%20консультацию.%0A%0AМеня%20зовут:%20%0AЗапрос%20(с%20чем%20хочу%20прийти):%20%0AФормат%20(онлайн%20/%20очно%20в%20Москве):%20%0AУдобное%20время:%20">Написать в Telegram с шаблоном</a>
+  </div>
+  <div class="links">
+    <a href="https://t.me/pokureynik">Telegram</a>
+    <a href="https://vk.com/teslapanda">ВКонтакте</a>
+    <a href="https://instagram.com/pokureynik">Instagram</a>
+  </div>
+  <p class="site-note">* Все определения на сайте — личные. У каждого они свои, и в этом многообразии вся прелесть.</p>
+</div></section>
+
+<footer class="foot"><div class="wrap">
+  <span>Герман Олейник · студент-практикующий психолог</span>
+  <span>экзистенциально-гуманистический подход · онлайн и очно</span>
+</div></footer>
+
+<!-- Лайтбокс для дипломов -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Просмотр документа">
+  <button class="lb-close" id="lbClose" aria-label="Закрыть">×</button>
+  <div class="lb-card">
+    <div class="lb-img" id="lbImg">скан диплома<br>(появится здесь)</div>
+    <div class="lb-cap"><b id="lbTitle"></b><small id="lbSub"></small></div>
+  </div>
+</div>
+
+<button class="totop" id="totop" aria-label="Наверх">↑</button>
+
+<script>
+(function(){
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  var els=document.querySelectorAll('.reveal');
+  var items=document.querySelectorAll('.need,.how-item,.faq-item,.note,.dip');
+  var roles=document.querySelector('.roles');
+  if(reduce||!('IntersectionObserver' in window)){
+    [].forEach.call(els,function(e){e.classList.add('in');});
+    [].forEach.call(items,function(e){e.classList.add('in');});
+    if(roles)roles.classList.add('in');
+  }else{
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});
+    },{rootMargin:'0px 0px -8% 0px',threshold:.08});
+    [].forEach.call(els,function(e){io.observe(e);});
+    var io2=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){if(en.isIntersecting){var el=en.target,i=[].indexOf.call(el.parentNode.children,el);el.style.transitionDelay=(Math.min(i,7)*55)+'ms';el.classList.add('in');io2.unobserve(el);}});
+    },{rootMargin:'0px 0px -6% 0px',threshold:.14});
+    [].forEach.call(items,function(e){io2.observe(e);});
+    if(roles){
+      var io3=new IntersectionObserver(function(entries){
+        entries.forEach(function(en){if(en.isIntersecting){[].forEach.call(en.target.children,function(s,i){s.style.setProperty('--d',(i*70)+'ms');});en.target.classList.add('in');io3.unobserve(en.target);}});
+      },{threshold:.35});
+      io3.observe(roles);
+    }
+  }
+
+  // Лайтбокс дипломов
+  var lb=document.getElementById('lb'),lbT=document.getElementById('lbTitle'),lbS=document.getElementById('lbSub');
+  function openLb(t,s){lbT.textContent=t;lbS.textContent=s;lb.classList.add('open');document.body.style.overflow='hidden';}
+  function closeLb(){lb.classList.remove('open');document.body.style.overflow='';}
+  [].forEach.call(document.querySelectorAll('.dip'),function(b){
+    b.addEventListener('click',function(){openLb(b.getAttribute('data-title'),b.getAttribute('data-sub'));});
+  });
+  document.getElementById('lbClose').addEventListener('click',closeLb);
+  lb.addEventListener('click',function(e){if(e.target===lb)closeLb();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLb();});
+
+  // Кнопка «наверх»
+  var totop=document.getElementById('totop');
+  window.addEventListener('scroll',function(){
+    if(window.scrollY>600)totop.classList.add('show');else totop.classList.remove('show');
+  },{passive:true});
+  totop.addEventListener('click',function(){window.scrollTo({top:0,behavior:reduce?'auto':'smooth'});});
+
+  // Подсветка активного пункта меню
+  var navmap={};
+  [].forEach.call(document.querySelectorAll('.navlinks a[href^="#"]'),function(a){var id=a.getAttribute('href').slice(1);if(id)navmap[id]=a;});
+  var spy=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){if(en.isIntersecting){var a=navmap[en.target.id];if(a){[].forEach.call(document.querySelectorAll('.navlinks a'),function(x){x.classList.remove('active');});a.classList.add('active');}}});
+  },{rootMargin:'-40% 0px -55% 0px'});
+  [].forEach.call(document.querySelectorAll('section[id]'),function(s){if(navmap[s.id])spy.observe(s);});
+})();
+</script>
+
+</body></html>
